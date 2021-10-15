@@ -38,8 +38,7 @@ function Bear()
 	};
 }
 
-function start()
-{
+function start() {
 	//create bear
 	bear = new Bear();
 	// Add an event listener to the keypress event
@@ -120,8 +119,7 @@ class Bee {
 	}
 }
 
-function create
-beeNumberImg(wNum) {
+function createBeeImg(wNum) {
 	// get dimension and position of board div
 	let boardDiv = document.getElementById("board");
 	let boardDivW = boardDiv.offsetWidth;
