@@ -23,7 +23,7 @@ h1{
 #board{
 	position: absolute;
 	height: 600px;
-	width: 100%;
+	width: 90%;
 	padding: 10px;
 	background-color: paleturquoise;
 	align-content: center;
