@@ -22,11 +22,10 @@ h1{
 }
 #board{
 	position: absolute;
-	right: 0;
-	left: 0;
+	right: 10px;
+	left: 10px;
 	bottom: 10px;
 	height: 600px;
-	padding: 10px;
 	background-color: paleturquoise;
 	align-content: center;
 	align-self: center;
