@@ -96,9 +96,9 @@ class Bee {
 
 		this.display = function(){
 			//adjust position of bee and display it
-			this.fitBounds(); // to fit within boundary of board
 			this.htmlElement.style.left = this.x + "px";
 			this.htmlElement.style.top = this.y + "px";
+			this.fitBounds(); // to fit within boundary of board
 			this.htmlElement.style.display = "block";
 		};
 
