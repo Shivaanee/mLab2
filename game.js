@@ -145,7 +145,7 @@ function createBeeImg(wNum) {
 	return img;
 }
 
-getRandomInt(n) {
+function getRandomInt(n) {
 	return Math.floor(Math.random() * n);
 }
 
