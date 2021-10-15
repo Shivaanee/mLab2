@@ -11,12 +11,39 @@ h1{
 #title{
 	padding: 10px;
 	background-color: palegoldenrod;
+	align-content: center;
+	align-self: center;
 }
 #scores{
 	padding: 15px 10px;
 	background-color: floralwhite;
+	align-self: center;
+	align-content: center;
 }
 #board{
+	position: absolute;
+	height: 600px;
+	width: 1200px;
 	padding: 10px;
 	background-color: paleturquoise;
+	align-content: center;
+	align-self: center;
+}
+.location {
+	color: purple;
+}
+#hits {
+	color: darkred;
+	font-weight: 500;
+}
+#duration {
+	color: royalblue;
+	font-weight: 500;
+}
+#bear {
+    position: absolute;
+    left: 100px;
+    /*top: 240px;*/
+    width: 100px;
+    height: 160px
 }

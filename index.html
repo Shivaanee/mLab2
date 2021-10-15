@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Bear Game</title>
-	<link rel="stylesheet" type="text/css" href="css/game.css">
+	<link rel="stylesheet" type="text/css" href="css/game.css" media="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="game.js"></script>
+	<noscript> Warning - JavaScript is Disabled. For full functionality of this page, it is necessary to enable JavaScript
+	</noscript>
+
+	<script>
+		var bear;
+	</script>
 </head>
-<body>
+<body onload="start();">
 	<div id="title">
 		<h1>Help the bear escape the bees!</h1>
-		<p>Avoid being stung by <input type="number" id="no-of-bees" min="2" value="2" step="2" name="no=of-bees"> bees. The objective is to have the least number of stings.</p>
-		<p>Bees' speed: <input type="number" id="beespeed" min="10" value="10" name="beespeed"> px/ms</p>
-		<p>Refresh period: <input type="number" id="refresh" min="10" value="10" name="refreh-period"> ms</p>
+		<p>Avoid being stung by <input type="number" id="nbBees" min="2" value="2" step="2" name="no=of-bees"> bees. The objective is to have the least number of stings.</p>
+		<p>Bees' speed: <input type="number" id="speedBees" min="10" value="10" name="beespeed"> px/ms</p>
+		<p>Refresh period: <input type="number" id="periodTimer" min="10" value="10" name="refreh-period"> ms</p>
 
 		<p><h3>Press left, right, up, down keys to move the bear</h3></p>
 
@@ -18,10 +26,11 @@
 
 	</div>
 	<div id="scores">
-		<span id="stings">Stings: </span>
-		<span id="best-duration">Best Duration: </span>
+		<span id="stings">Stings: [<span id="hits">0</span>]</span>
+		<span id="best-duration">Best Duration: [<span id="duration">?</span>]</span>
 	</div>
 	<div id="board">
+		<img src="./images/bear.gif" id="bear" alt="bear">
 	</div>
 </body>
 </html>
