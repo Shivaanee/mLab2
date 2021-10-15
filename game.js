@@ -1,6 +1,6 @@
 function Bear()
 {
-	this.dBear = 100;
+	this.dBear = document.getElementById("bearspeed").value;
 	this.htmlElement = document.getElementById("bear");
 	this.id = this.htmlElement.id;
 	this.x = this.htmlElement.offsetLeft;
@@ -44,6 +44,8 @@ function start()
 	bear = new Bear();
 	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
+	bearSpeed = document.getElementById("bearspeed");
+	bearSpeed.addEventListener("change", setSpeed, false);
 }
 
 // Handle keyboard events
