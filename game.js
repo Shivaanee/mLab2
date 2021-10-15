@@ -21,11 +21,11 @@ function Bear()
 
 	this.setSpeed = function() {
 		this.dBear = document.getElementById("bearspeed").value;
-	}
+	};
 
 	this.fitBounds = function() {
 		let parent = this.htmlElement.parentElement;
-		let iw = this.htmlElement.offsetWidth:
+		let iw = this.htmlElement.offsetWidth;
 		let ih = this.htmlElement.offsetHeight;
 		let l = parent.offsetLeft;
 		let t = parent.offsetTop;

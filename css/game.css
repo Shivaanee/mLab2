@@ -22,6 +22,7 @@ h1{
 }
 #board{
 	position: absolute;
+	right: 0;
 	height: 600px;
 	width: 90%;
 	padding: 10px;

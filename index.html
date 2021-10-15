@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Bear Game</title>
-	<link rel="stylesheet" type="text/css" href="css/game.css" media="all">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="game.js"></script>
-	<noscript> Warning - JavaScript is Disabled. For full functionality of this page, it is necessary to enable JavaScript
-	</noscript>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Bear Game</title>
+		<link rel="stylesheet" type="text/css" href="css/game.css" media="all">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="game.js"></script>
+		<noscript> Warning - JavaScript is Disabled. For full functionality of this page, it is necessary to enable JavaScript
+		</noscript>
 
-	<script>
-		var bear;
-	</script>
-</head>
-<body onload="start();">
-	<div id="title">
-		<h1>Help the bear escape the bees!</h1>
-		<p>Avoid being stung by <input type="number" id="nbBees" min="2" value="2" step="2" name="no=of-bees"> bees. The objective is to have the least number of stings.</p>
-		<p>Bees' speed: <input type="number" id="speedBees" min="10" value="10" name="speedBees"> px/ms</p>
-		<p>Bear's speed: <input type="number" id="bearspeed" min="50" value="100" name="bearspeed" onchange="setSpeed();"> px/ms</p>
-		<p>Refresh period: <input type="number" id="periodTimer" min="10" value="10" name="refreh-period"> ms</p>
+		<script>
+			var bear;
+		</script>
+	</head>
+	<body onload="start();">
+		<div id="title">
+			<h1>Help the bear escape the bees!</h1>
+			<p>Avoid being stung by <input type="number" id="nbBees" min="2" value="2" step="2" name="no=of-bees"> bees. The objective is to have the least number of stings.</p>
+			<p>Bees' speed: <input type="number" id="speedBees" min="10" value="10" name="speedBees"> px/ms</p>
+			<p>Bear's speed: <input type="number" id="bearspeed" min="50" value="100" name="bearspeed" onchange="setSpeed();"> px/ms</p>
+			<p>Refresh period: <input type="number" id="periodTimer" min="10" value="10" name="refreh-period"> ms</p>
 
-		<p><h3>Press left, right, up, down keys to move the bear</h3></p>
+			<p><h3>Press left, right, up, down keys to move the bear</h3></p>
 
-		<button type="button">START</button> &nbsp; <button type="button">ADD BEE</button>
+			<button type="button">START</button> &nbsp; <button type="button">ADD BEE</button>
 
-	</div>
-	<div id="scores">
-		<span id="stings">Stings: [<span id="hits">0</span>]</span>
-		<span id="best-duration">Best Duration: [<span id="duration">?</span>]</span>
-	</div>
-	<div id="board">
-		<img src="./images/bear.gif" id="bear" alt="bear">
-	</div>
-</body>
+		</div>
+		<div id="scores">
+			<span id="stings">Stings: [<span id="hits">0</span>]</span>
+			<span id="best-duration">Best Duration: [<span id="duration">?</span>]</span>
+		</div>
+		<div id="board">
+			<img src="./images/bear.gif" id="bear" alt="bear">
+		</div>
+	</body>
 </html>
