@@ -152,7 +152,7 @@ function getRandomInt(n) {
 function makeBees(){
 	//get number of bees specified by the user
 	let nbBees = document.getElementById("nbBees").value;
-	nbBees = Number(nbBees);
+	nbBees = Number(nbBees)/2;
 	//create Bees
 	let i = 1;
 	while(i <= nbBees) {
@@ -160,6 +160,6 @@ function makeBees(){
 		var bee = new Bee(num); // create object and its IMG element
 		bee.display(); // display the bee
 		bees.push(bee); // add bee object to bees array
-		i += 2;
+		i++;;
 	}
 }
