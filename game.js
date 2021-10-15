@@ -7,7 +7,7 @@ function Bear()
 	this.y = this.htmlElement.offsetTop;
 	this.move = function(xDir, yDir)
 	{
-		this.fitBounds();	// to keep bear within board
+		this.fitBounds(); // to keep bear within board
 		this.x += this.dBear * xDir;
 		this.y += this.dBear * yDir;
 		this.display();
@@ -18,6 +18,10 @@ function Bear()
 		this.htmlElement.style.top = this.y + "px";
 		this.htmlElement.style.display = "block";
 	};
+
+	this.setSpeed = function() {
+		this.dBear = document.getElementById("bearspeed").value;
+	}
 
 	this.fitBounds = function() {
 		let parent = this.htmlElement.parentElement;
