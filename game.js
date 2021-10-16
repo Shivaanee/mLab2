@@ -184,11 +184,11 @@ function moveBees(){
 	}
 }
 
-function updateBees() {
+/*function updateBees() {
 	//move bees randomly
 	moveBees();
 	//use a fixed update period
 	let period = document.getElementById("periodTimer").value;
 	//update timer for next move
 	updateTimer = setTimeout('updateBees()', period);
-}
+}*/
