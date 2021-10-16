@@ -140,7 +140,7 @@ function createBeeImg(wNum) {
 	let x = getRandomInt(boardDivW);
 	let y = getRandomInt(boardDivH);
 	img.style.left = (boardDivX + x) + "px";
-	img.style.top = y + "px";
+	img.style.top = (y-100) + "px";
 	// return img object
 	return img;
 }
