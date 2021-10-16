@@ -196,9 +196,9 @@ function updateBees() {
 
 function isHit(defender, offender) {
 	if(overlap(defender, offender)) { // check if two images overlap
-		let score = hits.innerHTML;
+		let score = document.getElementById("hits").innerHTML;
 		score = Number(score) + 1; // increment score
-		hits.innerHTML = score; // display new score
+		document.getElementById("hits").innerHTML = score; // display new score
 	}
 }
 
