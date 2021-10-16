@@ -156,8 +156,8 @@ function makeBees(){
 	nbBees = Number(nbBees)/2;
 	let boardDiv = document.getElementById("board");
 	if((boardDiv.children.length-1) < nbBees) {
-		let i = boardDiv.children.length;
-		while(i <= nbBees) {
+		let i = boardDiv.children.length-1;
+		while(i < nbBees) {
 			var num = i;
 			var bee = new Bee(num); // create object and its IMG element
 			bee.display(); // display the bee
