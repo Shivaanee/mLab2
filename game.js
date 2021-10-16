@@ -150,21 +150,24 @@ function getRandomInt(n) {
 }
 
 function makeBees(){
-	let boardDiv = document.getElementById("board");
-	while(boardDiv.children.length > 1) {
-		boardDiv.removeChild(boardDiv.lastChild);
-	}
 	//get number of bees specified by the user
 	let nbBees = document.getElementById("nbBees").value;
 	nbBees = Number(nbBees)/2;
-	//create Bees
-	let i = 1;
-	bees = [];
-	while(i <= nbBees) {
-		var num = i;
-		var bee = new Bee(num); // create object and its IMG element
-		bee.display(); // display the bee
-		bees.push(bee); // add bee object to bees array
-		i++;;
+	let boardDiv = document.getElementById("board");
+	if(boardDiv.children.length < nbBees) {
+		let i = boardDiv.children.length;
+		while(i <= nbBees) {
+			var num = i;
+			var bee = new Bee(num); // create object and its IMG element
+			bee.display(); // display the bee
+			bees.push(bee); // add bee object to bees array
+			i++;;
+		}
+	}
+	else if(boardDiv.children.length > nbBees) {
+		while(boardDiv.children.length > nbBees) {
+			boardDiv.removeChild(boardDiv.lastChild);
+			bees.pop();
+		}
 	}
 }
