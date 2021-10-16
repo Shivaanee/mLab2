@@ -17,7 +17,7 @@
 	<body onload="start();">
 		<div id="title">
 			<h1>Help the bear escape the bees!</h1>
-			<p>Avoid being stung by <input type="number" id="nbBees" min="2" value="2" step="2" name="no=of-bees"> bees. The objective is to have the least number of stings.</p>
+			<p>Avoid being stung by <input type="number" id="nbBees" min="2" value="2" step="2" name="no=of-bees" onchange="makeBees();"> bees. The objective is to have the least number of stings.</p>
 			<p>Bees' speed: <input type="number" id="speedBees" min="10" value="10" name="speedBees"> px/ms</p>
 			<p>Bear's speed: <input type="number" id="bearspeed" min="50" value="100" name="bearspeed"> px/ms</p>
 			<p>Refresh period: <input type="number" id="periodTimer" min="10" value="10" name="refreh-period"> ms</p>
