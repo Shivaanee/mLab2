@@ -150,6 +150,10 @@ function getRandomInt(n) {
 }
 
 function makeBees(){
+	let boardDiv = document.getElementById("board");
+	while(boardDiv.children.length > 1) {
+		boardDiv.removeChild(boardDiv.lastChild);
+	}
 	//get number of bees specified by the user
 	let nbBees = document.getElementById("nbBees").value;
 	nbBees = Number(nbBees)/2;
