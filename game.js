@@ -19,7 +19,7 @@ function Bear()
 		this.htmlElement.style.display = "block";
 	};
 
-	this.setSpeed = function() {
+	function setSpeed() {
 		this.dBear = document.getElementById("bearspeed").value;
 	};
 
@@ -43,8 +43,8 @@ function start() {
 	bear = new Bear();
 	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
-	//bearSpeed = document.getElementById("bearspeed");
-	//bearSpeed.addEventListener("change", bear.setSpeed, false);
+	bearSpeed = document.getElementById("bearspeed");
+	bearSpeed.addEventListener("change", bear.setSpeed, false);
 	bees = new Array(); // create new array for bees
 	makeBees(); // create bees
 }
