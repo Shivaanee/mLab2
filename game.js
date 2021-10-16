@@ -181,6 +181,7 @@ function moveBees(){
 		let dx = getRandomInt(2*speed) - speed;
 		let dy = getRandomInt(2*speed) - speed;
 		bees[i].move(dx, dy);
+		isHit(bees[i], bear); // to count stings
 	}
 }
 
@@ -191,4 +192,35 @@ function updateBees() {
 	let period = document.getElementById("periodTimer").value;
 	//update timer for next move
 	updateTimer = setTimeout(updateBees, period);
+}
+
+function isHit(defender, offender) {
+	if(overlap(defender, offender)) { // check if two images overlap
+		let score = hits.innerHTML;
+		score = Number(score) + 1; // increment score
+		hits.innerHTML = score; // display new score
+	}
+}
+
+function overlap(element1, element2) {
+	// consider the two rectangles wrapping the two elements
+	// rectangle of the first element
+	left1 = element1.htmlElement.offsetLeft;
+	top1 = element1.htmlElement.offsetTop;
+	right1 = element1.htmlElement.offsetLeft + element1.htmlElement.offsetWidth;
+	bottom1 = element1.htmlElement.offsetTop + element1.htmlElement.offsetHeight;
+	// rectangle of second element
+	left2 = element2.htmlElement.offsetLeft;
+	top2 = element2.htmlElement.offsetTop;
+	right2 = element2.htmlElement.offsetLeft + element2.htmlElement.offsetWidth;
+	bottom2 = element2.htmlElement.offsetTop + element2.htmlElement.offsetHeight;
+	// calculate intersection of the two rectangles
+	x_intersect = Math.max(0, Math.min(right1, right2) - Math.max(left1, left2));
+	y_intersect = Math.max(0, Math.min(bottom1, bottom2) - Math.max(top1, top2));
+	intersectArea = x_intersect * y_intersect;
+	// if intersection is nil => no hit
+	if(intersectArea == 0 || isNaN(intersectArea)) {
+		return false;
+	}
+	return True;
 }
