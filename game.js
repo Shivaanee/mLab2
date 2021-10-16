@@ -47,6 +47,8 @@ function start() {
 	bearSpeed.addEventListener("change", bear.setSpeed, false);
 	bees = new Array(); // create new array for bees
 	makeBees(); // create bees
+	updateTimer = setTimeout('updateBees()', document.getElementById("periodTimer").value);
+	updateBees();
 }
 
 // Handle keyboard events
@@ -170,4 +172,24 @@ function makeBees(){
 			bees.pop();
 		}
 	}
+}
+
+function moveBees(){
+	//get speed input field value
+	let speed = document.getElementById("speedBees").value;
+	//move each bee to random location
+	for(let i = 0; i < bees.length; i++) {
+		let dx = getRandomInt(2*speed) - speed;
+		let dy = getRandomInt(2*speed) - speed;
+		bees[i].move(dx, dy);
+	}
+}
+
+function updateBees() {
+	//move bees randomly
+	moveBees();
+	//use a fixed update period
+	let period = document.getElementById("periodTimer").value;
+	//update timer for next move
+	updateTimer = setTimeout('updateBees()', period);
 }
