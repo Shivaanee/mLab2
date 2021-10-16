@@ -154,7 +154,7 @@ function makeBees(){
 	let nbBees = document.getElementById("nbBees").value;
 	nbBees = Number(nbBees)/2;
 	let boardDiv = document.getElementById("board");
-	if(boardDiv.children.length < nbBees) {
+	if((boardDiv.children.length-1) < nbBees) {
 		let i = boardDiv.children.length;
 		while(i <= nbBees) {
 			var num = i;
@@ -164,7 +164,7 @@ function makeBees(){
 			i++;;
 		}
 	}
-	else if(boardDiv.children.length > nbBees) {
+	else if((boardDiv.children.length-1) > nbBees) {
 		while(boardDiv.children.length > nbBees) {
 			boardDiv.removeChild(boardDiv.lastChild);
 			bees.pop();
