@@ -47,7 +47,6 @@ function start() {
 	bearSpeed.addEventListener("change", bear.setSpeed, false);
 	bees = new Array(); // create new array for bees
 	makeBees(); // create bees
-	updateTimer = setTimeout('updateBees()', document.getElementById("periodTimer").value);
 	updateBees();
 }
 
