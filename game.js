@@ -190,5 +190,5 @@ function updateBees() {
 	//use a fixed update period
 	let period = document.getElementById("periodTimer").value;
 	//update timer for next move
-	updateTimer = setTimeout('updateBees()', period);
+	updateTimer = setTimeout(updateBees, period);
 }
