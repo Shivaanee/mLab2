@@ -179,8 +179,8 @@ function moveBees(){
 	let speed = document.getElementById("speedBees").value;
 	//move each bee to random location
 	for(let i = 0; i < bees.length; i++) {
-		let dx = getRandomInt(2*speed) - speed;
-		let dy = getRandomInt(2*speed) - speed;
+		let dx = getRandomInt(speed);
+		let dy = getRandomInt(speed);
 		bees[i].move(dx, dy);
 	}
 }
