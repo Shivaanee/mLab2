@@ -165,7 +165,7 @@ function makeBees(){
 		}
 	}
 	else if((boardDiv.children.length-1) > nbBees) {
-		while(boardDiv.children.length > nbBees) {
+		while((boardDiv.children.length-1) > nbBees) {
 			boardDiv.removeChild(boardDiv.lastChild);
 			bees.pop();
 		}
