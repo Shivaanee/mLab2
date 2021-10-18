@@ -212,11 +212,11 @@ function isHit(defender, offender) {
 		lastStingTime = newStingTime;
 		let longestDuration = Number(document.getElementById("duration").innerHTML);
 		if(longestDuration === 0) {
-			longestDuration = thisDuration;
+			longestDuration = thisDuration/1000;
 		} else {
-			if(longestDuration < thisDuration) longestDuration = thisDuration;
+			if(longestDuration < thisDuration) longestDuration = thisDuration/1000;
 		}
-		document.getElementById("duration").innerHTML = longestDuration/1000;
+		document.getElementById("duration").innerHTML = longestDuration;
 	}
 }
 
