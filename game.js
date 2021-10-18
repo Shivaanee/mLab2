@@ -52,6 +52,7 @@ function start() {
 	//lastStingTime = new Date();
 	//lastStingTime = document.addEventListener("keydown", Date);
 	document.addEventListener("keydown", () => {
+		if(!lastStingTime)
 		lastStingTime = new Date();
 	});
 }
