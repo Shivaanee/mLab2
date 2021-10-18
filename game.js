@@ -197,10 +197,10 @@ function updateBees() {
 function isHit(defender, offender) {
 	if(overlap(defender, offender)) { // check if two images overlap
 		let score = document.getElementById("hits").innerHTML;
-		if(score>=100) {
-			window.alert("Game Over!");
+		if(score>=1000) {
 			document.getElementById("board").innerHTML = "";
 			clearTimeout();
+			window.alert("Game Over!");
 		}
 		score = Number(score) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
