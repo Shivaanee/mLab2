@@ -54,7 +54,7 @@ function start() {
 	if(!bear) {
 		bear = new Bear(); // create bear
 	} else {
-		bear.move(bear.htmlElement.offsetLeft, bear.htmlElement.offsetTop);
+		bear.move(document.getElementById("bear").offsetLeft, document.getElementById("bear").offsetTop);
 	}
 
 	// Add an event listener to the keypress event
@@ -197,6 +197,7 @@ function makeBees(){
 
 function addBees() {
 	document.getElementById("nbBees").value = Number(document.getElementById("nbBees").value) + 2;
+	makeBees();
 }
 
 function moveBees(){
