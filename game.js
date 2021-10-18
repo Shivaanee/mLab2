@@ -71,7 +71,7 @@ function start() {
 
 	//lastStingTime = new Date();
 	document.addEventListener("keydown", () => {
-		if(!lastStingTime)
+		if((!lastStingTime)||(lastStingTime==null))
 		lastStingTime = new Date();
 	});
 }
