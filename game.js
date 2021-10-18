@@ -19,7 +19,7 @@ function Bear()
 		this.htmlElement.style.display = "block";
 	};
 
-	function setSpeed() {
+	this.setSpeed = function() {
 		this.dBear = document.getElementById("bearspeed").value;
 	};
 
