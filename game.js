@@ -39,18 +39,33 @@ function Bear()
 }
 
 function start() {
-	//create bear
-	bear = new Bear();
+	document.getElementById("hits").innerHTML = "0";
+	document.getElementById("duration").innerHTML = "0";
+	document.getElementById("periodTimer").value = 300;
+	lastStingTime = null;
+	if(!bees) {
+		bees = new Array(); // create new array for bees
+	} else {
+		document.getElementById("board").innerHTML = "";
+		for(let i = 0; i < bees.length; i++) {
+			bees.pop();
+		}
+	}
+	if(!bear) {
+		bear = new Bear(); // create bear
+	} else {
+		bear.move(bear.htmlElement.offsetLeft, bear.htmlElement.offsetTop);
+	}
+
 	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
 	bearSpeed = document.getElementById("bearspeed");
 	bearSpeed.addEventListener("change", bear.setSpeed, false);
-	bees = new Array(); // create new array for bees
 	makeBees(); // create bees
 	updateBees();
 	//take start time
+
 	//lastStingTime = new Date();
-	//lastStingTime = document.addEventListener("keydown", Date);
 	document.addEventListener("keydown", () => {
 		if(!lastStingTime)
 		lastStingTime = new Date();
@@ -178,6 +193,11 @@ function makeBees(){
 			bees.pop();
 		}
 	}
+}
+
+function addBees() {
+	document.getElementById("nbBees").value += 2;
+	makeBees();
 }
 
 function moveBees(){
