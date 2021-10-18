@@ -19,8 +19,8 @@ function Bear()
 		this.htmlElement.style.display = "block";
 	};
 
-	this.setSpeed = function() {
-		this.dBear = document.getElementById("bearspeed").value;
+	function setSpeed() {
+		this.dBear = Number(document.getElementById("bearspeed").value);
 	};
 
 	this.fitBounds = function() {
@@ -63,8 +63,9 @@ function start() {
 
 	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
-	var bearSpeed = document.getElementById("bearspeed");
-	bearSpeed.addEventListener("change", bear.setSpeed, false);
+	//bear's speed
+	document.addEventListener("change", setSpeed);
+
 	makeBees(); // create bees
 	updateBees();
 	//take start time
