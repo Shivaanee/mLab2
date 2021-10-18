@@ -196,8 +196,7 @@ function makeBees(){
 }
 
 function addBees() {
-	document.getElementById("nbBees").value += 2;
-	makeBees();
+	document.getElementById("nbBees").value = Number(document.getElementById("nbBees").value) + 2;
 }
 
 function moveBees(){
