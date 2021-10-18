@@ -46,6 +46,8 @@ function start() {
 	if(!bees) {
 		bees = new Array(); // create new array for bees
 	} else {
+		document.getElementById("nbBees").value = 2;
+		makeBees();
 		for(let i = 0; i < bees.length; i++) {
 			document.getElementById("board").removeChild(document.getElementById("board").lastChild);
 			bees.pop();
