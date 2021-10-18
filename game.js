@@ -50,7 +50,10 @@ function start() {
 	updateBees();
 	//take start time
 	//lastStingTime = new Date();
-	lastStingTime = document.addEventListener("keydown", Date);
+	//lastStingTime = document.addEventListener("keydown", Date);
+	document.addEventListener("keydown", () => {
+		lastStingTime = new Date();
+	});
 }
 
 // Handle keyboard events
