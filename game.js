@@ -54,7 +54,9 @@ function start() {
 	if(!bear) {
 		bear = new Bear(); // create bear
 	} else {
-		bear.move(document.getElementById("bear").offsetLeft, document.getElementById("bear").offsetTop);
+		document.getElementById("bear").style.left = "0px";
+		document.getElementById("bear").style.top = "0px";
+
 	}
 
 	// Add an event listener to the keypress event
