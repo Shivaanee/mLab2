@@ -208,13 +208,13 @@ function isHit(defender, offender) {
 		document.getElementById("hits").innerHTML = score; // display new score
 		//calculate longest duration
 		let newStingTime = new Date();
-		let thisDuration = newStingTime - lastStingTime;
+		let thisDuration = (newStingTime - lastStingTime)/1000;
 		lastStingTime = newStingTime;
-		let longestDuration = Number(document.getElementById("duration").innerHTML);
+		let longestDuration = Number(document.getElementById("duration").innerHTML)/1000;
 		if(longestDuration === 0) {
-			longestDuration = thisDuration/1000;
+			longestDuration = thisDuration;
 		} else {
-			if(longestDuration < thisDuration) longestDuration = thisDuration/1000;
+			if(longestDuration < thisDuration) longestDuration = thisDuration;
 		}
 		document.getElementById("duration").innerHTML = longestDuration;
 	}
