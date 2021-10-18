@@ -63,7 +63,7 @@ function start() {
 
 	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
-	bearSpeed = document.getElementById("bearspeed");
+	var bearSpeed = document.getElementById("bearspeed");
 	bearSpeed.addEventListener("change", bear.setSpeed, false);
 	makeBees(); // create bees
 	updateBees();
