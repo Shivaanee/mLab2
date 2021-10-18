@@ -49,7 +49,8 @@ function start() {
 	makeBees(); // create bees
 	updateBees();
 	//take start time
-	lastStingTime = new Date();
+	//lastStingTime = new Date();
+	lastStingTime = document.addEventListener("keydown", Date);
 }
 
 // Handle keyboard events
