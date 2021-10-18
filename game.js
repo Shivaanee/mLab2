@@ -214,11 +214,9 @@ function isHit(defender, offender) {
 		if(longestDuration === 0) {
 			longestDuration = thisDuration;
 			longestDuration /= 1000;
-		} else {
-			if(longestDuration < thisDuration) {
-				longestDuration = thisDuration;
-				longestDuration /= 1000;
-			}
+		} else if(longestDuration < thisDuration) {
+			longestDuration = thisDuration;
+			longestDuration /= 1000;
 		}
 		document.getElementById("duration").innerHTML = longestDuration;
 	}
