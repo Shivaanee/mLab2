@@ -197,9 +197,18 @@ function updateBees() {
 function isHit(defender, offender) {
 	if(overlap(defender, offender)) { // check if two images overlap
 		let score = document.getElementById("hits").innerHTML;
+		if(score>=1000) {
+			window.alert("Game Over!");
+			document.getElementById("board").innerHTML = "";
+			clearTimeout();
+		}
 		score = Number(score) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
 	}
+}
+
+function clearTimeout() {
+	updateTimer = null;
 }
 
 function overlap(element1, element2) {
@@ -222,5 +231,5 @@ function overlap(element1, element2) {
 	if(intersectArea == 0 || isNaN(intersectArea)) {
 		return false;
 	}
-	return True;
+	return true;
 }
