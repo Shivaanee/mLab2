@@ -48,6 +48,8 @@ function start() {
 	bees = new Array(); // create new array for bees
 	makeBees(); // create bees
 	updateBees();
+	//take start time
+	lastStingTime = new Date();
 }
 
 // Handle keyboard events
@@ -204,6 +206,17 @@ function isHit(defender, offender) {
 		}
 		score = Number(score) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
+		//calculate longest duration
+		let newStingTime = new Date();
+		let thisDuration = newStingTime - lastStingTime;
+		lastStingTime = newStingTime;
+		let longestDuration = Number(document.getElementById("duration").innerHTML);
+		if(longestDuration === 0) {
+			longestDuration = thisDuration;
+		} else {
+			if(longestDuration < thisDuration) longestDuration = thisDuration;
+		}
+		document.getElementById("duration").innerHTML = longestDuration;
 	}
 }
 
