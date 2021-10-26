@@ -224,8 +224,8 @@ function isHit(defender, offender) {
 	if(overlap(defender, offender)) { // check if two images overlap
 		let score = document.getElementById("hits").innerHTML;
 		if(score=="1000") {
-			start();
 			window.alert("Game Over!");
+			start();
 		}
 		score = Number(document.getElementById("hits").innerHTML) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
