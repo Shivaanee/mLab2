@@ -19,10 +19,6 @@ function Bear()
 		this.htmlElement.style.display = "block";
 	};
 
-	function setSpeed() {
-		this.dBear = document.getElementById("bearspeed").value;
-	};
-
 	this.fitBounds = function() {
 		let parent = this.htmlElement.parentElement;
 		let iw = this.htmlElement.offsetWidth;
@@ -37,6 +33,10 @@ function Bear()
 		if(this.y > h - ih) this.y = h - ih;
 	};
 }
+
+function setSpeed() {
+	bear.dBear = document.getElementById("bearspeed").value;
+};
 
 function start() {
 	document.getElementById("hits").innerHTML = "0";
@@ -63,8 +63,6 @@ function start() {
 
 	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
-	bearSpeed = document.getElementById("bearspeed");
-	bearSpeed.addEventListener("change", bear.setSpeed, false);
 	makeBees(); // create bees
 	updateBees();
 	//take start time
