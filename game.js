@@ -46,13 +46,13 @@ function start() {
 	lastStingTime = null;
 	if(!bees) {
 		bees = new Array(); // create new array for bees
+		makeBees();
 	} else {
 		for(let i = 1; i < bees.length; i++) {
 			bees.pop();
 		}
 		document.getElementById("nbBees").value = 2;
 	}
-	makeBees();
 	if(!bear) {
 		bear = new Bear(); // create bear
 		// Add an event listener to the keypress event
