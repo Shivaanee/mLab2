@@ -62,9 +62,7 @@ function start() {
 	setSpeed();
 	updateBees();
 	document.addEventListener("keydown", moveBear, false);
-	//take start time
 
-	//lastStingTime = new Date();
 	document.addEventListener("keydown", () => {
 		if((!lastStingTime)||(lastStingTime==null))
 		lastStingTime = new Date();
