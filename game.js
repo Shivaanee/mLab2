@@ -42,6 +42,7 @@ function start() {
 	document.getElementById("hits").innerHTML = "0";
 	document.getElementById("duration").innerHTML = "0";
 	document.getElementById("periodTimer").value = 300;
+	document.getElementById("speedBees").value = 50;
 	lastStingTime = null;
 	if(!bees) {
 		bees = new Array(); // create new array for bees
