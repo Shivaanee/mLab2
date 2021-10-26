@@ -48,11 +48,11 @@ function start() {
 		bees = new Array(); // create new array for bees
 		makeBees(); // create bees
 	} else {
-		document.getElementById("nbBees").value = 2;
-		makeBees();
 		for(let i = 0; i < bees.length; i++) {
 			bees.pop();
 		}
+		document.getElementById("nbBees").value = 2;
+		makeBees();
 	}
 	if(!bear) {
 		bear = new Bear(); // create bear
