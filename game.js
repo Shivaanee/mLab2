@@ -58,14 +58,13 @@ function start() {
 	}
 	if(!bear) {
 		bear = new Bear(); // create bear
+		// Add an event listener to the keypress event
+		document.addEventListener("keydown", moveBear, false);
 	} else {
 		bear.x = "0";
 		bear.y = "0";
 		bear.display();
 	}
-
-	// Add an event listener to the keypress event
-	document.addEventListener("keydown", moveBear, false);
 	updateBees();
 	//take start time
 
