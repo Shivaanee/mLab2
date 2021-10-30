@@ -16,7 +16,7 @@
 			var lastStingTime;
 		</script>
 	</head>
-	<body onload="start();">
+	<body id="body" onload="start();">
 		<div id="title">
 			<h1>Help the bear escape the bees!</h1>
 			<p>Avoid being stung by <input type="number" id="nbBees" min="2" value="2" step="2" name="no=of-bees" onchange="makeBees();"> bees. The objective is to have the least number of stings.</p>
@@ -31,10 +31,16 @@
 		</div>
 		<div id="scores">
 			<span>Stings: [<span id="hits">0</span>]</span>
-			<span id="best-duration">Best Duration: [<span id="duration">0</span> ms]</span>
+			<span>Best Duration: [<span id="duration">0</span> ms]</span>
 		</div>
 		<div id="board">
 			<img src="./images/bear.gif" id="bear" alt="bear">
+		</div>
+		<div id="gameover">
+			<h2>GAME OVER</h2>
+			<span id="gameover-duration">Best Duration: [<span>0</span> ms]</span>
+			<br>
+			<span id="restart-msg">▲ Click Restart to play again ▲</span>
 		</div>
 	</body>
 </html>

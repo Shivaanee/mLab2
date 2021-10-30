@@ -223,7 +223,7 @@ function isHit(defender, offender) {
 		let score = document.getElementById("hits").innerHTML;
 		if(score=="1000") {
 			window.alert("Game Over!");
-			//start();
+			start();
 		}
 		score = Number(document.getElementById("hits").innerHTML) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
@@ -242,10 +242,13 @@ function isHit(defender, offender) {
 }
 
 function gameOver() {
-	document.getElementById("hits").innerHTML = "0";
-	document.getElementById("duration").innerHTML = "0";
-	document.getElementById("periodTimer").value = 300;
-	document.getElementById("speedBees").value = 50;
+	duration = document.getElementById("duration");
+	body = document.getElementById("body");
+	body.removeChild(body.lastChild);	//remove gameboard
+	body.removeChild(body.lastChild);	//remove scoreboard
+
+	let div = document.createElement("div");
+	
 }
 
 function clearTimeout() {
