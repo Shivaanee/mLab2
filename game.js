@@ -223,7 +223,7 @@ function isHit(defender, offender) {
 		let score = document.getElementById("hits").innerHTML;
 		if(score=="1000") {
 			window.alert("Game Over!");
-			gameOver();
+			//gameOver();
 		}
 		score = Number(document.getElementById("hits").innerHTML) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
@@ -240,7 +240,7 @@ function isHit(defender, offender) {
 		document.getElementById("duration").innerHTML = longestDuration;
 	}
 }
-
+/*
 function gameOver() {
 	duration = document.getElementById("duration");
 	body = document.getElementById("body");
@@ -274,7 +274,7 @@ function gameOver() {
 	div[2].style.color = "#d9d290";
 	div[2].style.paddingTop = "40px";
 }
-
+*/
 function clearTimeout() {
 	updateTimer = null;
 }
