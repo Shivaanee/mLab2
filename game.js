@@ -240,7 +240,7 @@ function isHit(defender, offender) {
 		document.getElementById("duration").innerHTML = longestDuration;
 	}
 }
-
+/*
 function gameOver() {
 	duration = document.getElementById("duration");
 	body = document.getElementById("body");
@@ -274,7 +274,7 @@ function gameOver() {
 	div[2].style.color = "#d9d290";
 	div[2].style.paddingTop = "40px";
 }
-
+*/
 function clearTimeout() {
 	updateTimer = null;
 }
