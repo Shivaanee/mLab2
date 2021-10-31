@@ -223,7 +223,7 @@ function isHit(defender, offender) {
 		let score = document.getElementById("hits").innerHTML;
 		if(score=="1000") {
 			window.alert("Game Over!");
-			gameOver();
+			//gameOver();
 		}
 		score = Number(document.getElementById("hits").innerHTML) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
