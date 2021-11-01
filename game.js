@@ -241,6 +241,33 @@ function isHit(defender, offender) {
 	}
 }
 
+function clearTimeout() {
+	updateTimer = null;
+}
+
+function overlap(element1, element2) {
+	// consider the two rectangles wrapping the two elements
+	// rectangle of the first element
+	left1 = element1.htmlElement.offsetLeft;
+	top1 = element1.htmlElement.offsetTop;
+	right1 = element1.htmlElement.offsetLeft + element1.htmlElement.offsetWidth;
+	bottom1 = element1.htmlElement.offsetTop + element1.htmlElement.offsetHeight;
+	// rectangle of second element
+	left2 = element2.htmlElement.offsetLeft;
+	top2 = element2.htmlElement.offsetTop;
+	right2 = element2.htmlElement.offsetLeft + element2.htmlElement.offsetWidth;
+	bottom2 = element2.htmlElement.offsetTop + element2.htmlElement.offsetHeight;
+	// calculate intersection of the two rectangles
+	x_intersect = Math.max(0, Math.min(right1, right2) - Math.max(left1, left2));
+	y_intersect = Math.max(0, Math.min(bottom1, bottom2) - Math.max(top1, top2));
+	intersectArea = x_intersect * y_intersect;
+	// if intersection is nil => no hit
+	if(intersectArea == 0 || isNaN(intersectArea)) {
+		return false;
+	}
+	return true;
+}
+
 function gameOver() {
 	duration = document.getElementById("duration");
 	body = document.getElementById("body");
@@ -273,31 +300,4 @@ function gameOver() {
 	div[2].style.fontSize = "1em";
 	div[2].style.color = "#d9d290";
 	div[2].style.paddingTop = "40px";
-}
-
-function clearTimeout() {
-	updateTimer = null;
-}
-
-function overlap(element1, element2) {
-	// consider the two rectangles wrapping the two elements
-	// rectangle of the first element
-	left1 = element1.htmlElement.offsetLeft;
-	top1 = element1.htmlElement.offsetTop;
-	right1 = element1.htmlElement.offsetLeft + element1.htmlElement.offsetWidth;
-	bottom1 = element1.htmlElement.offsetTop + element1.htmlElement.offsetHeight;
-	// rectangle of second element
-	left2 = element2.htmlElement.offsetLeft;
-	top2 = element2.htmlElement.offsetTop;
-	right2 = element2.htmlElement.offsetLeft + element2.htmlElement.offsetWidth;
-	bottom2 = element2.htmlElement.offsetTop + element2.htmlElement.offsetHeight;
-	// calculate intersection of the two rectangles
-	x_intersect = Math.max(0, Math.min(right1, right2) - Math.max(left1, left2));
-	y_intersect = Math.max(0, Math.min(bottom1, bottom2) - Math.max(top1, top2));
-	intersectArea = x_intersect * y_intersect;
-	// if intersection is nil => no hit
-	if(intersectArea == 0 || isNaN(intersectArea)) {
-		return false;
-	}
-	return true;
 }
