@@ -223,7 +223,7 @@ function isHit(defender, offender) {
 		let score = document.getElementById("hits").innerHTML;
 		score = Number(document.getElementById("hits").innerHTML) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
-		if(score=="1000") {
+		if(score=="1001") {
 			window.location.pathname = 'C:/Users/Nisha/Documents/GitHub/mLab2/game-over/gameOver.html';
 		}
 		//calculate longest duration
