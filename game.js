@@ -226,6 +226,7 @@ function isHit(defender, offender) {
 		if(score=="1000") {
 			window.alert("Game Over!");
 			start();
+			return;
 		}
 		//calculate longest duration
 		let newStingTime = new Date();
