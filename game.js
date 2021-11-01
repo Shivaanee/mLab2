@@ -52,7 +52,6 @@ function start() {
 	makeBees();
 	if(!bear) {
 		bear = new Bear(); // create bear
-		// Add an event listener to the keypress event
 	} else {
 		bear.x = "0";
 		bear.y = "0";
@@ -61,6 +60,7 @@ function start() {
 	document.getElementById("bearspeed").value = 100;
 	setSpeed();
 	updateBees();
+	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
 
 	document.addEventListener("keydown", () => {
@@ -240,7 +240,7 @@ function isHit(defender, offender) {
 		document.getElementById("duration").innerHTML = longestDuration;
 	}
 }
-/*
+
 function gameOver() {
 	duration = document.getElementById("duration");
 	body = document.getElementById("body");
@@ -274,7 +274,7 @@ function gameOver() {
 	div[2].style.color = "#d9d290";
 	div[2].style.paddingTop = "40px";
 }
-*/
+
 function clearTimeout() {
 	updateTimer = null;
 }
