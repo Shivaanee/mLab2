@@ -39,6 +39,7 @@ function setSpeed() {
 };
 
 function start() {
+	window.location.reload():
 	document.getElementById("hits").innerHTML = "0";
 	document.getElementById("duration").innerHTML = "0";
 	document.getElementById("periodTimer").value = 300;
