@@ -225,8 +225,7 @@ function isHit(defender, offender) {
 		document.getElementById("hits").innerHTML = score; // display new score
 		if(score=="1000") {
 			window.alert("Game Over!");
-			start();
-			return;
+			window.location.reload();
 		}
 		//calculate longest duration
 		let newStingTime = new Date();
