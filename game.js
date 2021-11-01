@@ -225,7 +225,7 @@ function isHit(defender, offender) {
 		document.getElementById("hits").innerHTML = score; // display new score
 		if(score=="1000") {
 			window.alert("Game Over!");
-			window.location.reload();
+			window.location.pathname = 'game-over/gameOver.html';
 		}
 		//calculate longest duration
 		let newStingTime = new Date();
@@ -266,38 +266,4 @@ function overlap(element1, element2) {
 		return false;
 	}
 	return true;
-}
-
-function gameOver() {
-	duration = document.getElementById("duration");
-	body = document.getElementById("body");
-	body.removeChild(body.lastChild);	//remove gameboard
-	body.removeChild(body.lastChild);	//remove scoreboard
-
-	var div = document.createElement("div");
-	div.setAttribute("id", "gameover");
-	div.style.position = "absolute";
-	div.style.right = "10px";
-	div.style.left = "10px";
-	div.style.height = "500px";
-	div.style.backgroundColor = "black";
-	div.style.alignContent = "center";
-	div.style.alignSelf = "center";
-	div.style.textAlign = "center";
-	div.style.paddingBottom = "10px";
-
-	body.appendChild(div);
-	div = document.getElementById("gameover");
-	div.innerHTML = "<h2>GAME OVER</h2> <div id="gameover-duration">Best Duration: [<span>0</span> ms]</div> <div id="restart-msg">▲ Click Restart to play again ▲</div>";
-	//styling GAME OVER
-	div[0].style.fontSize = "7.5em";
-	div[0].style.color = "white";
-	//styling Best Duration
-	div[1].style.fontSize = "2em";
-	div[1].style.color = "palegoldenrod";
-	div[1].style.paddingBottom = "20px";
-	//styling restart message
-	div[2].style.fontSize = "1em";
-	div[2].style.color = "#d9d290";
-	div[2].style.paddingTop = "40px";
 }

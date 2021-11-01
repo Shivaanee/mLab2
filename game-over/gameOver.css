@@ -1,1 +1,27 @@
+#gameover{
+	position: absolute;
+	right: 10px;
+	left: 10px;
+	height: 500px;
+	background-color: black;
+	align-content: center;
+	align-self: center;
+	text-align: center;
+	padding-bottom: 10px;
+}
 
+h2 {
+	font-size: 7.5em;
+	color: white;
+}
+
+#gameover-duration{
+	font-size: 2em;
+	color: palegoldenrod;
+}
+
+#restart-msg {
+	font-size: 1em;
+	color: #d9d290;
+	padding-top: 40px;
+}
