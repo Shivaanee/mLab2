@@ -225,7 +225,7 @@ function isHit(defender, offender) {
 		document.getElementById("hits").innerHTML = score; // display new score
 		if(score=="1000") {
 			window.alert("Game Over!");
-			window.location.pathname = 'file:///C:/Users/Nisha/Documents/GitHub/mLab2/game-over/gameOver.html';
+			window.location.pathname = 'C:/Users/Nisha/Documents/GitHub/mLab2/game-over/gameOver.html';
 		}
 		//calculate longest duration
 		let newStingTime = new Date();
